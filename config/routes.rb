@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'html#index'
 
   get '/confirmation_email' => 'html#confirmation_email'
+  post '/confirmation_email' => 'html#send_confirmation_email', as: :send_confirmation_email
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

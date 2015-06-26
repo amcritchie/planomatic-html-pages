@@ -1,3 +1,8 @@
 <h1>HTML Pages</h1>
 
 <%= link_to 'Confirmation Email', confirmation_email_path %>
+
+<%= form_for :confirmation_email, :url =>send_confirmation_email_path do |f| %>
+    <%= f.text_field :email %>
+    <%= f.submit 'Send Confirmation Email' %>
+<% end %>
